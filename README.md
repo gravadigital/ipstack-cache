@@ -26,3 +26,15 @@ GET :url/api/ip/xx.xx.xx.xx - return ip info
 edit .env file
 
 SERVER_PORT and more
+
+### Run with docker
+```
+docker build . -t fregeoip-cache
+```
+### Run with docker-compose
+`docker-compose.yml` is a sample file there you can configure the environment variables
+
+```
+docker-compose build
+docker-compose up
+```

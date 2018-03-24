@@ -1,0 +1,30 @@
+version: '2'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    environment:
+      - SERVER_PORT=3000
+      - SERVER_HOST=localhost
+      - LOGGER_INFO_PATH=./info.log
+      - LOGGER_INFO_LEVEL=info
+      - LOGGER_FILE_MAX_SIZE=1000000
+      - LOGGER_MAX_FILES=50
+      - LOGGER_ERROR_PATH=./error.log
+      - LOGGER_ERROR_LEVEL='error'
+      - IS_BEHIND_PROXY=false
+      - MONGODB_HOST=mongo
+      - MONGODB_PORT=27017
+      - MONGODB_DB=default
+      - NODE_ENV=develop
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
