@@ -35,7 +35,6 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//Baucis configuration
 const mongoose = require('mongoose');
 mongoose.Promise = Promise;
 mongoose.connect('mongodb://' + process.env.MONGODB_HOST + ':' + process.env.MONGODB_PORT + '/' + process.env.MONGODB_DB)
@@ -60,7 +59,6 @@ app.get('/', function(req, res) {
     res.json({date:date.getTime()});
 });
 
-// catch 404 and forward to error handler
 app.use(function(req, res, next) {
     let err = new Error('Not Found');
     err.status = 404;

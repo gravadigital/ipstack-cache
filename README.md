@@ -1,4 +1,4 @@
-# IpStacj cache
+# IpStack cache
 this node proyect cache data from https://ipstack.com (old https://freegeoip.net/)
 
 ### Install dependencies:
@@ -18,10 +18,10 @@ npm start
 ```
 ### Data
 ```
-GET :url/api/ip - return your ip info
+GET :url/api/ip - return your ip info (not for local ip)
 ```
 ```
-GET :url/api/ip/xx.xx.xx.xx - return ip info
+GET :url/api/ip/xx.xx.xx.xx - return ip info (not for local ip)
 ```
 
 ### Configuration:
