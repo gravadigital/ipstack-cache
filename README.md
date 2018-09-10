@@ -1,5 +1,5 @@
-# Fregeoip cache
-this node proyect cache data from https://freegeoip.net/
+# IpStacj cache
+this node proyect cache data from https://ipstack.com (old https://freegeoip.net/)
 
 ### Install dependencies:
 * require node v4 or higher
@@ -9,6 +9,9 @@ npm install
 ```
 
 ### Usage:
+* edit .env file: `IPSTACK_TOKEN` required
+
+
 the api start in port 3000
 ```
 npm start
@@ -25,7 +28,7 @@ GET :url/api/ip/xx.xx.xx.xx - return ip info
 
 edit .env file
 
-SERVER_PORT and more
+SERVER_PORT, IPSTACK_TOKEN and more
 
 ### Run with docker
 ```
