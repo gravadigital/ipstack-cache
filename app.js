@@ -46,7 +46,7 @@ mongoose.connect('mongodb://' + process.env.MONGODB_HOST + ':' + process.env.MON
     });
 
 
-const buildBaucis = require('./build-baucis');
+const buildBaucis = require('./build-hiroki');
 const baucisInstance = buildBaucis();
 app.use('/api', baucisInstance);
 
