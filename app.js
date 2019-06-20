@@ -2,8 +2,7 @@
 const express = require('express');
 const path = require('path');
 // var favicon = require('serve-favicon');
-const dotenv = require('dotenv');
-dotenv.load();
+require('dotenv').config();
 
 const logger = require('./lib/logger');
 const expressWinston = require('express-winston');

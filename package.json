@@ -7,26 +7,26 @@
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
-    "body-parser": "^1.15.2",
-    "compression": "^1.6.2",
-    "cookie-parser": "^1.4.3",
-    "cors": "^2.8.1",
-    "dotenv": "^2.0.0",
-    "express": "^4.16.2",
-    "express-winston": "^2.4.0",
-    "helmet": "^3.12.0",
-    "hiroki": "0.0.6",
-    "moment": "^2.21.0",
-    "mongoose": "^5.4.0",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-winston": "^3.2.0",
+    "helmet": "^3.18.0",
+    "hiroki": "0.2.3",
+    "moment": "^2.24.0",
+    "mongoose": "^5.6.0",
     "mongoose-findorcreate": "^3.0.0",
-    "mongoose-gridfs": "^0.1.0",
+    "mongoose-gridfs": "^1.2.3",
     "request": "^2.88.0",
-    "request-promise": "^4.2.2",
-    "serve-favicon": "^2.4.3",
-    "winston": "^2.2.0"
+    "request-promise": "^4.2.4",
+    "serve-favicon": "^2.5.0",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
-    "eslint": "^4.1.1",
+    "eslint": "^5.16.0",
     "eslint-formatter-checkstyle-relative-paths": "^1.0.1"
   }
 }
