@@ -18,11 +18,12 @@ services:
       - LOGGER_MAX_FILES=50
       - LOGGER_ERROR_PATH=./error.log
       - LOGGER_ERROR_LEVEL='error'
-      - IS_BEHIND_PROXY=false
       - MONGODB_HOST=mongo
       - MONGODB_PORT=27017
       - MONGODB_DB=default
       - NODE_ENV=develop
+      - IPSTACK_TOKEN=
+      - IPSTACK_URL=http://api.ipstack.com/
   mongo:
     image: mongo
     restart: always
