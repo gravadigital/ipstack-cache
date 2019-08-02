@@ -1,22 +1,32 @@
 # IpStack cache
-this node proyect cache data from https://ipstack.com (old https://freegeoip.net/)
+This node proyect cache data from https://ipstack.com (old https://freegeoip.net/)
 
-### Install dependencies:
+## Run using docker image
+Use image from https://hub.docker.com/r/gravadigital/ipstack-cache
+```
+docker pull gravadigital/ipstack-cache
+```
+Use `docker-compose.yml` file as reference and configure your ipstack api key in `IPSTACK_TOKEN` environment variable.
+
+## Run localy:
+
+#### Install dependences:
 * require node v4 or higher
-
 ```
 npm install
 ```
 
-### Usage:
-* edit .env file: `IPSTACK_TOKEN` required
+#### Configure:
+Copy .env.template file into .env and set your ipstack api key in `IPSTACK_TOKEN` field.
 
-
-the api start in port 3000
+#### Run:
 ```
 npm start
 ```
-### Data
+
+## Usage:
+
+#### Route
 ```
 GET :url/api/ip - return your ip info (not for local ip)
 ```
@@ -24,20 +34,39 @@ GET :url/api/ip - return your ip info (not for local ip)
 GET :url/api/ip/xx.xx.xx.xx - return ip info (not for local ip)
 ```
 
-### Configuration:
-
-edit .env file
-
-SERVER_PORT, IPSTACK_TOKEN and more
-
-### Run with docker
+#### Response format
 ```
-docker build . -t fregeoip-cache
+{
+    _id: (String),
+    ipRange: (String),
+    countryCode: (String),
+    countryName: (String),
+    regionCode: (String),
+    regionName: (String),
+    city: (String),
+    zipCode: (String),
+    timeZone: (String),
+    latitude: (Number),
+    longitude: (Number),
+    metroCode: (Number)
+}
 ```
-### Run with docker-compose
-`docker-compose.yml` is a sample file there you can configure the environment variables
 
+#### Example
+Request:
 ```
-docker-compose build
-docker-compose up
+GET /api/ip/181.45.90.105
+```
+Response:
+```
+{
+  "ipRange": "181.45.90",
+  "countryCode": "AR",
+  "countryName": "Argentina",
+  "regionCode": "B",
+  "regionName": "Buenos Aires",
+  "city": "Claypole",
+  "latitude": -34.8,
+  "longitude": -58.3333
+}
 ```
