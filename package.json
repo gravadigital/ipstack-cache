@@ -15,7 +15,7 @@
     "express": "^4.17.1",
     "express-winston": "^4.0.1",
     "helmet": "^3.21.2",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "mongoose": "^5.7.13",
     "request": "^2.88.0",
     "request-promise": "^4.2.5",
