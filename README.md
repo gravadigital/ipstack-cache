@@ -71,15 +71,32 @@ Response:
 }
 ```
 
-## Build and publish in DockerHub
+## Generate a new version
 
-### Login in DockerHub
+First of all, make sure you have incremented the package.json's version.
+
+### Push and tag in Github
+
+Make a commit in master. Then generate a tag pointing to this commit
+```
+git tag -a 1.1.2
+```
+where "1.1.2" is the new version
+
+Push the commits and tag
+```
+git push --tags origin master
+```
+
+### Publish to DockerHub
+
+#### Login in DockerHub
 ```
 docker login
 ```
 and complete with user and password from https://hub.docker.com
 
-### Build image localy
+#### Build image localy
 ```
 docker build -t gravadigital/ipstack-cache:1.1.2 .
 ```
@@ -90,7 +107,7 @@ Then make a "latest" version
 docker tag gravadigital/ipstack-cache:1.1.2 gravadigital/ipstack-cache:latest
 ```
 
-### Push to DockerHub
+#### Push to DockerHub
 Push both versions: number and latest
 ```
 docker push gravadigital/ipstack-cache:1.1.2
