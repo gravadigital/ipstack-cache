@@ -8,18 +8,18 @@ docker pull gravadigital/ipstack-cache
 ```
 Use `docker-compose.yml` file as reference and configure your ipstack api key in `IPSTACK_TOKEN` environment variable.
 
-## Run localy:
+## Run localy
 
-#### Install dependences:
+#### Install dependences
 * require node v4 or higher
 ```
 npm install
 ```
 
-#### Configure:
+#### Configure
 Copy .env.template file into .env and set your ipstack api key in `IPSTACK_TOKEN` field.
 
-#### Run:
+#### Run
 ```
 npm start
 ```
@@ -70,3 +70,30 @@ Response:
   "longitude": -58.3333
 }
 ```
+
+## Build and publish in DockerHub
+
+### Login in DockerHub
+```
+docker login
+```
+and complete with user and password from https://hub.docker.com
+
+### Build image localy
+```
+docker build -t gravadigital/ipstack-cache:1.1.2 .
+```
+where 1.1.2 is the current new version
+
+Then make a "latest" version
+```
+docker tag gravadigital/ipstack-cache:1.1.2 gravadigital/ipstack-cache:latest
+```
+
+### Push to DockerHub
+Push both versions: number and latest
+```
+docker push gravadigital/ipstack-cache:1.1.2
+docker push gravadigital/ipstack-cache:latest
+```
+You must have permissions to edit this project in https://hub.docker.com
