@@ -16,7 +16,7 @@
     "express-winston": "^4.2.0",
     "helmet": "^5.1.0",
     "moment": "^2.29.3",
-    "mongoose": "^6.3.4",
+    "mongoose": "^6.4.6",
     "request": "^2.88.0",
     "request-promise": "^4.2.5",
     "serve-favicon": "^2.5.0",
